@@ -5,7 +5,7 @@
 
 **data 폴더**<br>
 - model : 연관검색어, 검색결과 모델<br>
-- service : api 호출<br>
+- service : api 호출<br><br>
 
 
 # 스크린샷

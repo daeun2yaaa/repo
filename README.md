@@ -2,6 +2,7 @@
 **common 폴더**<br>
 - common : api URL, Bearer token 정보<br>
 - function : 메인 색상(#4472B4), 원 단위 절사 메소드 <br><br>
+
 **data 폴더**<br>
 - model : 연관검색어, 검색결과 모델<br>
 - service : api 호출<br>

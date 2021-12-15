@@ -1,4 +1,11 @@
-# 기능구현
+# 프로젝트 관련
+**Common**
+common : api URL, Bearer token 정보
+function : 메인 색상(#4472B4), 원 단위 절사 메소드 
+
+**data**
+model : 연관검색어, 검색결과 모델
+service : api 호출
 
 
 # 스크린샷

@@ -7,6 +7,8 @@
 - model : 연관검색어, 검색결과 모델<br>
 - service : api 호출<br><br>
 
+**version**
+Flutter 2.0.5 / Dart 2.12.3<br><br>
 
 # 스크린샷
 

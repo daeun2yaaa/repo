@@ -9,6 +9,7 @@ class SearchResultProvider with ChangeNotifier {
   late SearchClient searchClient;
 
   List<SearchModel> result = [];
+  dynamic searchResult = [];
 
   Future<bool> initProvider(BuildContext context, {required String token}) async {
     searchClient = SearchClient(setDio(token: token));
@@ -17,13 +18,20 @@ class SearchResultProvider with ChangeNotifier {
   }
 
   bool _isSearch = true;
-
+  bool _isEnter = false;
   String _searchWords = '';
 
   bool get isSearch => _isSearch;
 
   set isSearch(bool isSearch){
     _isSearch=isSearch;
+    notifyListeners();
+  }
+
+  bool get isEnter => _isEnter;
+
+  set isEnter(bool isEnter){
+    _isEnter=isEnter;
     notifyListeners();
   }
 
@@ -44,9 +52,7 @@ class SearchResultProvider with ChangeNotifier {
 
   void getResult() async {
     await searchClient.getDataResult(searchWords).then((value) {
-      // result.clear();
-      // result = value;
-      print(value['data']['posts']);
+      searchResult=value;
       notifyListeners();
     }).catchError((obj){
       switch (obj.runtimeType) {

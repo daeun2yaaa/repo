@@ -41,7 +41,7 @@ class _SearchClient implements SearchClient {
     final _data = <String, dynamic>{};
     final _result = await _dio.fetch(_setStreamType<dynamic>(
         Options(method: 'GET', headers: _headers, extra: _extra)
-            .compose(_dio.options, 'tag/data?search=마더스페어',
+            .compose(_dio.options, 'tag/data?q=${keyword}&per_page=6',
                 queryParameters: queryParameters, data: _data)
             .copyWith(baseUrl: baseUrl ?? _dio.options.baseUrl)));
     final value = _result.data;

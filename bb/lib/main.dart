@@ -16,6 +16,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: SearchScreen(),
+      debugShowCheckedModeBanner: false,
       theme: ThemeData(
         scaffoldBackgroundColor: Colors.white,
         appBarTheme: const AppBarTheme(
@@ -30,7 +31,6 @@ class MyApp extends StatelessWidget {
           focusedBorder: const UnderlineInputBorder(
             borderSide: BorderSide(color: mainColor),
           ),
-
         ),
       ),
     );

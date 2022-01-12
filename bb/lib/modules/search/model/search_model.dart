@@ -15,3 +15,4 @@ class SearchModel with _$SearchModel {
 
   factory SearchModel.fromJson(Map<String, dynamic> json) => _$SearchModelFromJson(json);
 }
+

@@ -14,6 +14,7 @@ abstract class SearchClient {
   @GET("tag/search?q={keyword}&per_page=8")
   Future<List<SearchModel>> getRelatedSearchResult(@Path("keyword") String keyword);
 
-  // @GET("tag/data?q={keyword}&per_page=6")
-  // Future getDataResult(@Path("keyword") String keyword);
+  /// 검색 결과 (post, events)
+  @GET("tag/data?q={keyword}&per_page=6")
+  Future getDataResult(@Path("keyword") String keyword);
 }
